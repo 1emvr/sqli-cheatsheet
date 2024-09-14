@@ -1,6 +1,3 @@
-USERS_TPVQBO
-SELECT column_name FROM all_tab_columns WHERE table_name = ‘USERS_TPVQBO’;
-
 USERNAME_FAMENO
 PASSWORD_YZSRWB
 

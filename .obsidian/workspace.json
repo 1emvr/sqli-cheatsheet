@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Oracle.md",
+                "file": "PostgreSQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Oracle.md",
+                "file": "PostgreSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Oracle.md",
+                "file": "PostgreSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Oracle.md"
+                "file": "PostgreSQL.md"
               }
             }
           }
@@ -161,7 +161,7 @@
   },
   "active": "097e227df868bae5",
   "lastOpenFiles": [
-    "PostgreSQL.md",
-    "Oracle.md"
+    "Oracle.md",
+    "PostgreSQL.md"
   ]
 }
