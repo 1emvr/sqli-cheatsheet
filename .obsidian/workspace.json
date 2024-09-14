@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "aeb0abdce95da4d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PostgreSQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -159,9 +171,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "097e227df868bae5",
+  "active": "aeb0abdce95da4d4",
   "lastOpenFiles": [
-    "Oracle.md",
-    "PostgreSQL.md"
+    "scratchpad.md",
+    "PostgreSQL.md",
+    "Oracle.md"
   ]
 }
