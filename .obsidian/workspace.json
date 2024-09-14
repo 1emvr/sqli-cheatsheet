@@ -173,6 +173,9 @@
   },
   "active": "aeb0abdce95da4d4",
   "lastOpenFiles": [
+    "scripts/blind-test.py~",
+    "scripts/blind-test.py",
+    "scripts",
     "scratchpad.md",
     "PostgreSQL.md",
     "Oracle.md"
